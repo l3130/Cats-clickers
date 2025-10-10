@@ -1,17 +1,17 @@
 body {
     font-family: Arial, sans-serif;
     background: #f9f9f9;
-    text-align: center;
     margin: 0;
     padding: 0;
 }
 
 h1 {
     color: #333;
+    text-align: center;
     margin-top: 40px;
 }
 
-#cat-container {
+.main-container {
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -19,26 +19,55 @@ h1 {
     flex-wrap: wrap;
 }
 
-.cat {
+.cat-list {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    padding: 24px 32px;
+    min-width: 200px;
+    height: fit-content;
+}
+
+.cat-list h2 {
+    margin-top: 0;
+    color: #4a4a4a;
+}
+
+#cat-names {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cat-names li {
+    padding: 10px 0;
+    cursor: pointer;
+    color: #0077cc;
+    font-size: 1.1em;
+    border-bottom: 1px solid #eee;
+    transition: background 0.2s;
+}
+
+#cat-names li:hover {
+    background: #f0f8ff;
+}
+
+.cat-display {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.10);
     padding: 24px 32px 20px 32px;
-    width: 320px;
-    transition: box-shadow 0.2s;
+    min-width: 320px;
+    text-align: center;
 }
 
-.cat:hover {
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-}
-
-.cat h2 {
+.cat-display h2 {
     color: #4a4a4a;
     margin-bottom: 18px;
 }
 
-.cat img {
-    width: 100%;
+.cat-display img {
+    width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: 8px;
@@ -48,7 +77,7 @@ h1 {
     background: #eee;
 }
 
-.cat p {
+.cat-display p {
     font-size: 1.2em;
     color: #555;
     margin: 0;
