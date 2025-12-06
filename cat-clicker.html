@@ -16,8 +16,32 @@
                 <!-- Cat names will be injected here -->
             </ul>
         </div>
+
         <div class="cat-display" id="cat-display">
             <!-- Selected cat info will be injected here -->
+        </div>
+    </div>
+
+    <div class="admin-panel">
+        <button id="admin-btn" type="button">Admin</button>
+        <div id="admin-area" style="display:none;">
+            <h3>Edit Cat</h3>
+            <label>
+                Name:
+                <input id="admin-name" type="text">
+            </label>
+            <label>
+                Image URL:
+                <input id="admin-url" type="text">
+            </label>
+            <label>
+                Clicks:
+                <input id="admin-clicks" type="number" min="0">
+            </label>
+            <div class="admin-actions">
+                <button id="admin-save" type="button">Save</button>
+                <button id="admin-cancel" type="button">Cancel</button>
+            </div>
         </div>
     </div>
 </body>
